@@ -1,8 +1,9 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import { sizing } from '@material-ui/system';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,16 +21,20 @@ const useStyles = makeStyles((theme) => ({
     body: {
         flexGrow: 1,
         textAlign: 'left',
-        marginLeft: theme.spacing(4.25),
         paragraph: true,
         noWrap: false,
     },
     textBox: {
-
+        minWidth: "300px",
+        minHeight: "200px",
+        height: "20%",
+        width: "30%",
+        marginLeft: theme.spacing(4.25),
+        display: "block",
     },
 }));
 
-const mainTheme = createMuiTheme({
+let mainTheme = createMuiTheme({
     shadows: ["none"],
     typography: {
         h1: {
@@ -50,6 +55,7 @@ const mainTheme = createMuiTheme({
     },
 })
 
+/** 
 mainTheme.typography = ({
         h1: {
             fontFamily: 'proxim-nova',
@@ -72,10 +78,16 @@ mainTheme.typography = ({
             [mainTheme.breakpoints.down('xs')]: {
                 fontSize: 15,
               },
+            [mainTheme.breakpoints.down('xm')]: {
+            fontSize: 22,
+            },
         },
         "fontStyle": 'italic',
         primaryColor: '#d3d3d3',
 })
+**/
+
+mainTheme = responsiveFontSizes(mainTheme);
 
 function MainContent() {
     const classes = useStyles();
@@ -88,8 +100,8 @@ function MainContent() {
             </Typography>
             <br>
             </br>
-            <div className={classes.textBox}>
-                <Typography variant="h6" className={classes.body} style={{width: 500, display: 'inline-block'}}>
+            <Box className={classes.textBox} whiteSpace="normal">
+                <Typography variant="h6" className={classes.body}>
                     A Front End Developer from Vancouver with a passion for creating long lasting designs
                     that stand out.
                     <br>
@@ -100,7 +112,7 @@ function MainContent() {
                     Check out my resume to learn about me, and check out my work 
                     page to see what I have built.
                 </Typography>
-            </div>    
+            </Box>    
         </ThemeProvider>
         </div>
     );

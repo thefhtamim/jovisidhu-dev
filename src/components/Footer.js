@@ -36,7 +36,7 @@ function Footer() {
     const classes = useStyles();
 
     return(
-        <div>
+        <div display="block">
             <Grid container className={classes.root} spacing={2}>
                 <Grid item xs={"10px"}>
                     <Grid container  spacing={1} className={styles.leftAlign}>
