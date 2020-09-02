@@ -37,24 +37,24 @@ function Header() {
                 <AppBar position="static" style={{ backgroundColor: "white", color: "black"}} >
                     <Toolbar>
                         <Button className={classes.menuButton}>
-                            <Typography variant="h6" className={classes.title} >
+                            <Typography variant="h3" className={classes.title} >
                                 WORK 
                             </Typography>
                         </Button>
                         <Button className={classes.menuButton}>
-                        <Typography variant="h6" className={classes.title}>
-                            ABOUT
+                            <Typography variant="h3" className={classes.title} onClick={() => window.open("https://drive.google.com/file/d/1RDuH2kjIGr8oiNyONvpTD3yOV0QOtQJ6/view?usp=sharing", " _blank")}>
+                                RESUME
                         </Typography>
                         </Button>
                         <Button className={classes.menuButton}>
-                        <Typography variant="h6" className={classes.title} onClick={() => window.open("https://drive.google.com/file/d/1RDuH2kjIGr8oiNyONvpTD3yOV0QOtQJ6/view?usp=sharing", " _blank")}>
-                            RESUME
+                        <Typography variant="h3" className={classes.title}>
+                            ABOUT
                         </Typography>
                         </Button>
                     </Toolbar>
                 </AppBar>
             </ThemeProvider>
-        <Divider />
+            <Divider />
         </div>
     );
 }
