@@ -1,17 +1,15 @@
 import React from 'react';
-import { makeStyles, StylesProvider } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
+import { makeStyles } from '@material-ui/core/styles';
 import { GitHub, LinkedIn, Instagram }  from '@material-ui/icons';
 import styles from './Footer.module.css';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
 
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
-        marginLeft: 35,
+        marginLeft: 15,
         marginBottom: 10,
         marginTop: 10,
         top: 'auto',

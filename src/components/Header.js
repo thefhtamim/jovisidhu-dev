@@ -1,11 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
+import { Button, Divider, Typography, Toolbar, Box, responsiveFontSizes } from '@material-ui/core';
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import Landing from '../pages/Landing';
+import Work from '../pages/Work';
+import About from '../pages/About';
+import image from '../assets/Artboard11.svg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,17 +14,39 @@ const useStyles = makeStyles((theme) => ({
     },
     menuButton: {
         marginRight: theme.spacing(5),
+        [headerTheme.breakpoints.down('xs')]: {
+            marginRight: theme.spacing(1),
+          },
+    },
+    menuIcon: {
+        marginTop: 20,
+        [headerTheme.breakpoints.down('xs')]: {
+            height: 60,
+            widht: 60,
+          },
     },
     title: {
         flexGrow: 1,
         textAlign: 'center',
+        fontSize: 22,
+        marginTop: 0,
+        [headerTheme.breakpoints.down('xs')]: {
+            fontSize: 15,
+            marginTop: 10,
+            marginRight: theme.spacing(1),
+          },
     },
 }));
 
-const headerTheme = createMuiTheme({
+let headerTheme = createMuiTheme({
     shadows: ["none"],
     typography: {
         fontFamily: '"proxima-nova", sans-serif',
+        h3: {
+            fontFamily: 'proxima-nova',
+            fontSize: 22,
+            fontWeight: "fontWeightBold",
+        },
     },
 })
 
@@ -33,28 +56,46 @@ function Header() {
     return (
         <div>
             <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css"/>
-            <ThemeProvider theme={headerTheme}>
-                <AppBar position="static" style={{ backgroundColor: "white", color: "black"}} >
-                    <Toolbar>
-                        <Button className={classes.menuButton}>
-                            <Typography variant="h3" className={classes.title} >
-                                WORK 
-                            </Typography>
-                        </Button>
-                        <Button className={classes.menuButton}>
-                            <Typography variant="h3" className={classes.title} onClick={() => window.open("https://drive.google.com/file/d/1RDuH2kjIGr8oiNyONvpTD3yOV0QOtQJ6/view?usp=sharing", " _blank")}>
-                                RESUME
-                        </Typography>
-                        </Button>
-                        <Button className={classes.menuButton}>
-                        <Typography variant="h3" className={classes.title}>
-                            ABOUT
-                        </Typography>
-                        </Button>
-                    </Toolbar>
-                </AppBar>
-            </ThemeProvider>
-            <Divider />
+            <BrowserRouter>
+                <div className="navigation">
+                    <div className="navigation-sub">
+                        <ThemeProvider theme={headerTheme}>
+                            <Toolbar>
+                                <Link to="/" className="item">
+                                    <img className={classes.menuIcon} src={image} height={100} width={100} />
+                                </Link>
+                                <Box style={{flex: 1, minWidth: 10}}></Box>
+                                <Button className={classes.menuButton}>
+                                    <Link to="/work" className="item" style={{ textDecoration: 'none'}}>
+                                        <Typography variant="h3" className={classes.title} >
+                                            work
+                                        </Typography>
+                                    </Link>
+                                </Button>
+                                <Button className={classes.menuButton}>
+                                    <Typography variant="h3" className={classes.title} onClick={() => window.open("https://drive.google.com/file/d/1RDuH2kjIGr8oiNyONvpTD3yOV0QOtQJ6/view?usp=sharing", " _blank")}>
+                                        resume
+                                    </Typography>
+                                </Button>
+                                <Button className={classes.menuButton}>
+                                    <Link to="/about" className="item" style={{ textDecoration: 'none'}}>
+                                        <Typography variant="h3" className={classes.title}>
+                                            about
+                                        </Typography>
+                                    </Link>
+                                </Button>
+                                <Box style={{flex: 1}}></Box>
+                            </Toolbar>
+                        </ThemeProvider>
+                    </div>
+
+                    <div className="page-body">
+                        <Route exact path="/" component={Landing} />
+                        <Route path="/work" component={Work} />
+                        <Route path="/about" component={About} />
+                    </div>
+                </div>
+            </BrowserRouter>
         </div>
     );
 }

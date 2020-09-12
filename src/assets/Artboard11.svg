@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Artboard_11" data-name="Artboard 11">
+    <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" x="212.6" y="221.8" width="3668.1" height="3653.1" rx="279" ry="279"/>
+    <path id="J_copy" data-name="J copy" class="cls-1" d="M18632,15579.5c384.2,0,624.3-209.6,624.3-659.2V13283.2h-253.2v1624c0,292.5-144,423.4-388.5,423.4-144.1,0-275-43.6-362.3-96l-96.1,222.6C18269.7,15518.3,18431.2,15579.5,18632,15579.5Zm30.6,410.3c602.4,0,1004.1-358,1004.1-1047.7V13283.2h-253.2V14929c0,541.3-292.5,812-768.4,812-218.2,0-419-65.5-554.4-135.4l-96,218.3C18151.9,15911.2,18387.6,15989.8,18662.6,15989.8Z" transform="translate(-16784 -12588)"/>
+  </g>
+</svg>

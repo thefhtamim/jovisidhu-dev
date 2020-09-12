@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 300px;
+        fill: #fff;
+        font-family: OskarInline-TwoBold, "Oskar Inline";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="Artboard_9" data-name="Artboard 9">
+    <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" x="213.6" y="221.78" width="3668.1" height="3653.1" rx="279" ry="279"/>
+    <text id="J" class="cls-1" transform="translate(1414.235 3020.441) scale(10.803)">J</text>
+  </g>
+</svg>
