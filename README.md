@@ -4,8 +4,8 @@ This website is currently:
 ```diff 
 ! 60% complete 
 ```
-*TODO: Grid view of completed project thumbnails.
-*TODO: Case study view of completed design projects.
-*TODO: Blurb and photo formatted for the 'about' page.
+* TODO: Grid view of completed project thumbnails.
+* TODO: Case study view of completed design projects.
+* TODO: Blurb and photo formatted for the 'about' page.
 
 It can be visited at https://jovisidhu.dev 
