@@ -1,6 +1,6 @@
 The source code for my personal portfolio website, written entirely on my own, without referring to any template or tutorial. It is a react app using the React Router, and Material-UI framework. It is hosted using Netlify, with a domain from Google Domains.
 
-This website is currently: <span style="color: yellow"> 65% complete </span>
+This website is currently: ! 65% complete 
 
 TODO: Grid view of completed project thumbnails.
 TODO: Case study view of completed design projects.
