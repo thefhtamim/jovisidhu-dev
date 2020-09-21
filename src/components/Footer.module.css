@@ -1,22 +1,7 @@
 .infoIcon {
     background-repeat: no-repeat;
     background-position: center center;
-    margin-left: 39px;
-    margin-top: 39px;
-    vertical-align: middle;
-    color: rgb(43, 43, 43);
-    border-radius: 100%;
-    z-index: 0;
-    width: 100px;
-    height: 100px;
-    transform: scale(2);
-    transition: all .15s cubic-bezier(.11,.65,1,1.69);
-}
-
-.githubIcon {
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-left: 39px;
+    margin-right: 60px;
     margin-top: 39px;
     vertical-align: middle;
     color: rgb(43, 43, 43);
