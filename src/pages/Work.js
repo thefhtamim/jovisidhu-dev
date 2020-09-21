@@ -8,34 +8,37 @@ import image from '../assets/artboard1.svg';
  
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
-    marginTop: 25,
+    marginTop: 50,
     flexGrow: 1,
-    direction: "row",
-    justify: "center",
-    alignItems: "center",
   },
   paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: "#d3d3d3",
   },
   containerHost: {
+    marginTop: 25,
     justifyContent: "center", 
     alignItems: "center", 
     display: "flex"
   },
   container: {
-    width: 1000,
+    padding: 0,
+    margin: 0,
     display: "flex",
     flexDirection: "row",
-    padding: "50px",
-    alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
   },
   containerElement: {
     margin: "5px",
     width: "250px",
     height: "150px",
+    marginRight: "65px",
+    [theme.breakpoints.down('xs')]: {
+      marginRight: 0,
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 0,
+    },
     borderRadius: "10px",
     backgroundColor: "#000000",
   },

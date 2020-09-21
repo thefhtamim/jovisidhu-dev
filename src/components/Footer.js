@@ -25,7 +25,7 @@ function Footer() {
         <div display="block">
             <Toolbar className={classes.root}>
                 <Box style={{flex: 1}}></Box>
-                <GitHub className={styles.infoIcon} onClick={() => window.open("https://github.com/Mal-Jovi/", " _blank")}></GitHub>
+                <GitHub className={styles.githubIcon} onClick={() => window.open("https://github.com/Mal-Jovi/", " _blank")}></GitHub>
                 <LinkedIn className={styles.infoIcon} onClick={() => window.open("https://www.linkedin.com/in/jovi-sidhu/", " _blank")}></LinkedIn>
                 <Instagram className={styles.infoIcon} onClick={() => window.open("https://www.instagram.com/maljovi/", " _blank")}></Instagram>
                 <Box style={{flex: 1}}></Box>
