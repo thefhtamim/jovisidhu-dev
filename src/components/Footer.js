@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
         width: "100%",
         background: '#FFFFFF',
         position: 'fixed',
-        height: "150px",
+        height: "150",
     },
     paper: {
         height: 100,

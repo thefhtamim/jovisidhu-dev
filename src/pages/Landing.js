@@ -75,8 +75,7 @@ function Landing() {
                         <br>
                         </br> 
                         { /*TODO: There should be a way to isolate and change the color of a single word*/ }
-                        Check out my resume to learn about me, and check out my work 
-                        page to see what I have built.
+                        I am currently looking for entry positions in front end development and test.
                     </Typography>
                 </Box>  
             </ThemeProvider>

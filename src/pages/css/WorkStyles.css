@@ -1,0 +1,18 @@
+
+header {
+    border-bottom: 1px solid var(--divider);
+    position: relative;
+  }
+
+  .container {
+    max-width: 990px;
+    flex: 1 1 100%;
+    padding: 45px 25px;
+    justify-content: center;
+  }
+
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }

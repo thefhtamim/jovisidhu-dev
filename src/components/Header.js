@@ -1,12 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { Button, Divider, Typography, Toolbar, Box, responsiveFontSizes } from '@material-ui/core';
+import { Button, Typography, Toolbar, Box } from '@material-ui/core';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Landing from '../pages/Landing';
 import Work from '../pages/Work';
 import About from '../pages/About';
-import image from '../assets/Artboard11.svg';
+import image from '../assets/artboard1.svg';
+import { Frame, Stack } from "framer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
     menuButton: {
         marginRight: theme.spacing(5),
+        backgroundColor: 'transparent',
         [headerTheme.breakpoints.down('xs')]: {
             marginRight: theme.spacing(1),
           },
@@ -24,15 +26,18 @@ const useStyles = makeStyles((theme) => ({
             height: 60,
             widht: 60,
           },
+        "&:hover": {
+        backgroundColor: "transparent"
+        },
     },
     title: {
         flexGrow: 1,
         textAlign: 'center',
         fontSize: 22,
-        marginTop: 0,
+        marginTop: 10,
         [headerTheme.breakpoints.down('xs')]: {
             fontSize: 15,
-            marginTop: 10,
+            marginTop: 12,
             marginRight: theme.spacing(1),
           },
     },
@@ -66,7 +71,7 @@ function Header() {
                                 </Link>
                                 <Box style={{flex: 1, minWidth: 10}}></Box>
                                 <Button className={classes.menuButton}>
-                                    <Link to="/work" className="item" style={{ textDecoration: 'none'}}>
+                                    <Link to="/work" className="item" style={{ textDecoration: 'none', color: 'black'}}>
                                         <Typography variant="h3" className={classes.title} >
                                             work
                                         </Typography>
@@ -78,7 +83,7 @@ function Header() {
                                     </Typography>
                                 </Button>
                                 <Button className={classes.menuButton}>
-                                    <Link to="/about" className="item" style={{ textDecoration: 'none'}}>
+                                    <Link to="/about" className="item" style={{ textDecoration: 'none', color: 'black'}}>
                                         <Typography variant="h3" className={classes.title}>
                                             about
                                         </Typography>
@@ -88,7 +93,6 @@ function Header() {
                             </Toolbar>
                         </ThemeProvider>
                     </div>
-
                     <div className="page-body">
                         <Route exact path="/" component={Landing} />
                         <Route path="/work" component={Work} />
