@@ -7,7 +7,6 @@ import Landing from '../pages/Landing';
 import Work from '../pages/Work';
 import About from '../pages/About';
 import image from '../assets/artboard1.svg';
-import { Frame, Stack } from "framer";
 
 const useStyles = makeStyles((theme) => ({
     root: {

@@ -1,10 +1,8 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Card, Box } from '@material-ui/core';
 import "./css/WorkStyles.css";
 import { motion } from "framer-motion";
-
-import image from '../assets/artboard1.svg';
+import { Typography, Box } from "@material-ui/core";
+import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
  
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
@@ -40,9 +38,26 @@ const useStyles = makeStyles((theme) => ({
       marginRight: 0,
     },
     borderRadius: "10px",
-    backgroundColor: "#000000",
   },
+  elementText: {
+    marginTop: "100px",
+    marginLeft: "15px",
+    color: "white",
+    margin: "auto",
+  }
 }));
+
+let bodyTheme = createMuiTheme({
+  shadows: ["none"],
+  typography: {
+      fontFamily: '"proxima-nova", sans-serif',
+      h1: {
+          fontFamily: 'proxima-nova',
+          fontSize: 35,
+          fontWeight: "fontWeightBold",
+      },
+  },
+})
 
 function Work() {
   const classes = useStyles();
@@ -53,34 +68,65 @@ function Work() {
 
   return(
     <div className={classes.gridContainer}>
-      <flexbox className={classes.containerHost} >
-        <flexbox className={classes.container}>
-          <motion.div
-          className={classes.containerElement}
-          variants={hover}
-          whileHover={"variantA"}
-          size={150}
-          radius={30}
-          background={"#d3d3d3"}
-          />
-          <motion.div
-          className={classes.containerElement}
-          variants={hover}
-          whileHover={"variantA"}
-          size={150}
-          radius={30}
-          background={"#d3d3d3"}
-          />
-          <motion.div
-          className={classes.containerElement}
-          variants={hover}
-          whileHover={"variantA"}
-          size={150}
-          radius={30}
-          background={"#d3d3d3"}
-          />
+      <ThemeProvider theme={bodyTheme}>
+        <flexbox className={classes.containerHost} >
+          <flexbox className={classes.container}>
+            <motion.div
+            className={classes.containerElement}
+            variants={hover}
+            whileHover={"variantA"}
+            size={150}
+            radius={30}
+            style={{backgroundColor: "#000000"}}
+            >
+              <Typography className={classes.elementText} variant="h1">
+                jovisidhu.dev
+              </Typography>
+            </motion.div>
+            <motion.div
+            className={classes.containerElement}
+            variants={hover}
+            whileHover={"variantA"}
+            size={150}
+            radius={30}
+            style={{backgroundColor: "#FF5656"}}
+            >
+              <Typography className={classes.elementText} variant="h1">
+                pokedex
+              </Typography>
+            </motion.div>
+            <motion.div
+            className={classes.containerElement}
+            variants={hover}
+            whileHover={"variantA"}
+            size={150}
+            radius={30}
+            style={{backgroundColor: "#0B484F"}}
+            >
+              <Typography className={classes.elementText} variant="h1">
+                TOGOSPICE
+              </Typography>
+            </motion.div>
+            <motion.div
+            className={classes.containerElement}
+            variants={hover}
+            whileHover={"variantA"}
+            size={150}
+            radius={30}
+            style={{backgroundColor: "#BFB064"}}
+            >
+              <Typography className={classes.elementText} variant="h1">
+                Trout 62
+              </Typography>
+            </motion.div>
+          </flexbox>
         </flexbox>
-      </flexbox>
+        <Box className={classes.container}>
+          <Typography style={{color: "red", marginTop: "100px"}} variant="h1">
+                  This page is underconstruction, the buttons currently don't redirect anywhere! AAAH!
+          </Typography>
+        </Box>
+      </ThemeProvider>
     </div>
   );
 }
