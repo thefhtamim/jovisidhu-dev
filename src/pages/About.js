@@ -16,17 +16,50 @@ const useStyles = makeStyles(theme => ({
     lineHeight: "25px",
   },
   containerText: {
-    marginRight: "65px",
+    marginTop: "50px",
+    marginLeft: "100px",
     minWidth: "200px",
+    width: "500px",
+    height: "500px",
+    [theme.breakpoints.down('xs')]: {
+      height: "500",
+      width: "500",
+      marginLeft: "0px",
+    },
+    padding: 0,
+    margin: 0,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
+    order: 2,
   },
   containerImage: {
-
+    order: 1,
+    marginLeft: "0px",
   },
   containerHost: {
     marginTop: "60px",
     justifyContent: "center", 
     alignItems: "center", 
-    display: "flex"
+    display: "flex",
+    marginLeft: "0px",
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: "40px",
+    },
+    padding: 0,
+    margin: 0,
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  avatar: {
+    height: "520px",
+    width: "400px",
+    [theme.breakpoints.down('xs')]: {
+      height: "260",
+      width: "200",
+    },
   },
 }));
 
@@ -61,7 +94,7 @@ function About() {
         <ThemeProvider theme={aboutTheme}>
           <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css" />
           <flexbox className={classes.containerHost}>
-            <Box className={classes.containerText} style={{width: 500, height: 500}}>
+            <Box className={classes.containerText}>
               <Typography variant="h1" className={classes.text}>
               I am Jovi Sidhu, a native of Vancouver, and a semester away
               from completing my Bachelors at McGill University in Biology and Computer Science.
@@ -77,7 +110,7 @@ function About() {
               </Typography>
             </Box>
             <Box className={classes.containerImage}>
-              <Avatar variant="square" alt="Jovi-Sidhu" src={avatarImage} style={{height: 520, width: 400}}/>
+              <Avatar className={classes.avatar} variant="square" alt="photo" src={avatarImage}/>
             </Box>
           </flexbox>
         </ThemeProvider>
