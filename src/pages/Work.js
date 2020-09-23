@@ -1,8 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import "./css/WorkStyles.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Typography, Box } from "@material-ui/core";
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import jovisidhudev from "./jovisidhudev.js";
+import togospice from "./togospice.js";
+import pokedex from "./pokedex.js";
+import trout62 from "./trout62.js";
  
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
@@ -40,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
   },
   elementText: {
-    marginTop: "100px",
-    marginLeft: "15px",
+    paddingTop: "100px",
+    paddingLeft: "15px",
     color: "white",
     margin: "auto",
   }
@@ -64,68 +70,80 @@ function Work() {
 
   const hover = {
       variantA: { scale: 1.5, backgroundColor: "#d3d3d3" },
+      variantB: { scale: 5 },
   }
+
+  const [isVisible, setIsVisible] = useState(false);
 
   return(
     <div className={classes.gridContainer}>
       <ThemeProvider theme={bodyTheme}>
-        <flexbox className={classes.containerHost} >
-          <flexbox className={classes.container}>
-            <motion.div
-            className={classes.containerElement}
-            variants={hover}
-            whileHover={"variantA"}
-            size={150}
-            radius={30}
-            style={{backgroundColor: "#000000"}}
-            >
-              <Typography className={classes.elementText} variant="h1">
-                jovisidhu.dev
-              </Typography>
-            </motion.div>
-            <motion.div
-            className={classes.containerElement}
-            variants={hover}
-            whileHover={"variantA"}
-            size={150}
-            radius={30}
-            style={{backgroundColor: "#FF5656"}}
-            >
-              <Typography className={classes.elementText} variant="h1">
-                pokedex
-              </Typography>
-            </motion.div>
-            <motion.div
-            className={classes.containerElement}
-            variants={hover}
-            whileHover={"variantA"}
-            size={150}
-            radius={30}
-            style={{backgroundColor: "#0B484F"}}
-            >
-              <Typography className={classes.elementText} variant="h1">
-                TOGOSPICE
-              </Typography>
-            </motion.div>
-            <motion.div
-            className={classes.containerElement}
-            variants={hover}
-            whileHover={"variantA"}
-            size={150}
-            radius={30}
-            style={{backgroundColor: "#BFB064"}}
-            >
-              <Typography className={classes.elementText} variant="h1">
-                Trout 62
-              </Typography>
-            </motion.div>
+        <Router>
+          <flexbox className={classes.containerHost} >
+            <flexbox className={classes.container}>
+              <Link to="/work/jovisidhudev" style={{ textDecoration: "none", color: 'black'}}>
+                <motion.div
+                  className={classes.containerElement}
+                  variants={hover}
+                  whileHover={"variantA"}
+                  size={150}
+                  radius={30}
+                  style={{backgroundColor: "#000000"}}
+                >
+                  <Typography className={ classes.elementText } variant="h1">
+                    jovisidhu.dev
+                  </Typography>
+                </motion.div>
+              </Link>
+              <Link to="/work/pokedex" style={{ textDecoration: "none", color: 'black'}}>
+              <motion.div
+              className={classes.containerElement}
+              variants={hover}
+              whileHover={"variantA"}
+              size={150}
+              radius={30}
+              style={{backgroundColor: "#FF5656"}}
+              >
+                <Typography className={classes.elementText} variant="h1">
+                  pokedex
+                </Typography>
+              </motion.div>
+              </Link>
+              <Link to="/work/togospice" style={{ textDecoration: "none", color: 'black'}}>
+              <motion.div
+              className={classes.containerElement}
+              variants={hover}
+              whileHover={"variantA"}
+              size={150}
+              radius={30}
+              style={{backgroundColor: "#0B484F"}}
+              >
+                <Typography className={classes.elementText} variant="h1">
+                  TOGOSPICE
+                </Typography>
+              </motion.div>
+              </Link>
+              <Link to="/work/trout62" style={{ textDecoration: "none", color: 'black'}}>
+              <motion.div
+              className={classes.containerElement}
+              variants={hover}
+              whileHover={"variantA"}
+              size={150}
+              radius={30}
+              style={{backgroundColor: "#BFB064"}}
+              >
+                <Typography className={classes.elementText} variant="h1">
+                  Trout 62
+                </Typography>
+              </motion.div>
+              </Link>
+            </flexbox>
           </flexbox>
-        </flexbox>
-        <Box className={classes.container}>
-          <Typography style={{color: "red", marginTop: "100px"}} variant="h1">
-                  This page is underconstruction, the buttons currently don't redirect anywhere! AAAH!
-          </Typography>
-        </Box>
+          <Route exact path="/work/jovisidhudev" component={jovisidhudev} />
+          <Route exact path="/work/pokedex" component={pokedex} />
+          <Route exact path="/work/togospice" component={togospice} />
+          <Route exact path="/work/trout62" component={trout62} />
+        </Router>
       </ThemeProvider>
     </div>
   );

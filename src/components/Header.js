@@ -54,8 +54,15 @@ let headerTheme = createMuiTheme({
     },
 })
 
+const variants = {
+    open: { opacity: 1, x: 0, transition: { duration: 1} },
+    closed: { opacity: 0, x: "-100%", transition: { duration: 1 } }
+}
+
 function Header() {
     const classes = useStyles();
+
+
 
     return (
         <div>
