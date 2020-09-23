@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./css/WorkStyles.css";
-import { AnimatePresence, motion } from "framer-motion";
-import { Typography, Box } from "@material-ui/core";
+import { motion } from "framer-motion";
+import { Typography, } from "@material-ui/core";
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import jovisidhudev from "./jovisidhudev.js";
@@ -96,46 +96,46 @@ function Work() {
                 </motion.div>
               </Link>
               <Link to="/work/pokedex" style={{ textDecoration: "none", color: 'black'}}>
-              <motion.div
-              className={classes.containerElement}
-              variants={hover}
-              whileHover={"variantA"}
-              size={150}
-              radius={30}
-              style={{backgroundColor: "#FF5656"}}
-              >
-                <Typography className={classes.elementText} variant="h1">
-                  pokedex
-                </Typography>
-              </motion.div>
+                <motion.div
+                className={classes.containerElement}
+                variants={hover}
+                whileHover={"variantA"}
+                size={150}
+                radius={30}
+                style={{backgroundColor: "#FF5656"}}
+                >
+                  <Typography className={classes.elementText} variant="h1">
+                    pokedex
+                  </Typography>
+                </motion.div>
               </Link>
               <Link to="/work/togospice" style={{ textDecoration: "none", color: 'black'}}>
-              <motion.div
-              className={classes.containerElement}
-              variants={hover}
-              whileHover={"variantA"}
-              size={150}
-              radius={30}
-              style={{backgroundColor: "#0B484F"}}
-              >
-                <Typography className={classes.elementText} variant="h1">
-                  TOGOSPICE
-                </Typography>
-              </motion.div>
+                <motion.div
+                className={classes.containerElement}
+                variants={hover}
+                whileHover={"variantA"}
+                size={150}
+                radius={30}
+                style={{backgroundColor: "#0B484F"}}
+                >
+                  <Typography className={classes.elementText} variant="h1">
+                    TOGOSPICE
+                  </Typography>
+                </motion.div>
               </Link>
               <Link to="/work/trout62" style={{ textDecoration: "none", color: 'black'}}>
-              <motion.div
-              className={classes.containerElement}
-              variants={hover}
-              whileHover={"variantA"}
-              size={150}
-              radius={30}
-              style={{backgroundColor: "#BFB064"}}
-              >
-                <Typography className={classes.elementText} variant="h1">
-                  Trout 62
-                </Typography>
-              </motion.div>
+                <motion.div
+                className={classes.containerElement}
+                variants={hover}
+                whileHover={"variantA"}
+                size={150}
+                radius={30}
+                style={{backgroundColor: "#BFB064"}}
+                >
+                  <Typography className={classes.elementText} variant="h1">
+                    Trout 62
+                  </Typography>
+                </motion.div>
               </Link>
             </flexbox>
           </flexbox>
