@@ -14,19 +14,21 @@ const useStyles = makeStyles((theme) => ({
     },
     menuButton: {
         marginRight: theme.spacing(5),
-        backgroundColor: 'transparent',
+        backgroundColor: "transparent",
+        "&:hover": {
+            backgroundColor: "transparent",
+        },
         [headerTheme.breakpoints.down('xs')]: {
             marginRight: theme.spacing(1),
           },
     },
     menuIcon: {
-        marginTop: 20,
         [headerTheme.breakpoints.down('xs')]: {
             height: 60,
             widht: 60,
           },
         "&:hover": {
-        backgroundColor: "transparent"
+        backgroundColor: "transparent",
         },
     },
     title: {
@@ -39,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
             marginTop: 12,
             marginRight: theme.spacing(1),
           },
+    },
+    navigationBar: {
+        marginTop: 20,
     },
 }));
 
@@ -71,30 +76,30 @@ function Header() {
                 <div className="navigation">
                     <div className="navigation-sub">
                         <ThemeProvider theme={headerTheme}>
-                            <Toolbar>
+                            <Toolbar className={classes.navigationBar}>
                                 <Link to="/" className="item">
                                     <img className={classes.menuIcon} src={image} height={100} width={100} />
                                 </Link>
                                 <Box style={{flex: 1, minWidth: 10}}></Box>
-                                <Button className={classes.menuButton}>
-                                    <Link to="/work" className="item" style={{ textDecoration: 'none', color: 'black'}}>
+                                <Link to="/work" className="item" style={{ textDecoration: 'none', color: 'black'}}>
+                                    <Button className={classes.menuButton}>
                                         <Typography variant="h3" className={classes.title} >
                                             work
                                         </Typography>
-                                    </Link>
-                                </Button>
-                                <Button className={classes.menuButton}>
-                                    <Typography variant="h3" className={classes.title} onClick={() => window.open("https://drive.google.com/file/d/1RDuH2kjIGr8oiNyONvpTD3yOV0QOtQJ6/view?usp=sharing", " _blank")}>
+                                    </Button>
+                                </Link>
+                                <Button className={classes.menuButton} onClick={() => window.open("https://drive.google.com/file/d/1RDuH2kjIGr8oiNyONvpTD3yOV0QOtQJ6/view?usp=sharing", " _blank")}>
+                                    <Typography variant="h3" className={classes.title}>
                                         resume
                                     </Typography>
                                 </Button>
-                                <Button className={classes.menuButton}>
-                                    <Link to="/about" className="item" style={{ textDecoration: 'none', color: 'black'}}>
+                                <Link to="/about" className="item" style={{ textDecoration: 'none', color: 'black'}}>
+                                    <Button className={classes.menuButton}>
                                         <Typography variant="h3" className={classes.title}>
                                             about
                                         </Typography>
-                                    </Link>
-                                </Button>
+                                    </Button>
+                                </Link>
                                 <Box style={{flex: 1}}></Box>
                             </Toolbar>
                         </ThemeProvider>
