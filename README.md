@@ -2,7 +2,7 @@ The source code for my personal portfolio website, written entirely on my own, w
 
 This website is currently: 
 ```diff 
-! 75% complete 
+ 75% complete 
 ```
 * TODO: Grid view of completed project thumbnails.
 * TODO: Case study view of completed design projects.
