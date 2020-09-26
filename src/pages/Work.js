@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "15px",
     color: "white",
     margin: "auto",
-  }
+  },
 }));
 
 let bodyTheme = createMuiTheme({
@@ -69,7 +69,7 @@ function Work() {
   const classes = useStyles();
 
   const hover = {
-      variantA: { scale: 1.5, backgroundColor: "#d3d3d3" },
+      variantA: { scale: 1.5 },
       variantB: { scale: 5 },
   }
 

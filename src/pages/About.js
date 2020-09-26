@@ -17,17 +17,16 @@ const useStyles = makeStyles(theme => ({
   },
   containerText: {
     marginTop: "50px",
-    marginLeft: "100px",
     minWidth: "200px",
     width: "500px",
     height: "500px",
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("920")]: {
       height: "500",
-      width: "500",
-      marginLeft: "0px",
+      width: "300",
+      marginLeft: 0,
     },
     padding: 0,
-    margin: 0,
+    marginLeft: "100px",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
@@ -37,6 +36,7 @@ const useStyles = makeStyles(theme => ({
   containerImage: {
     order: 1,
     marginLeft: "0px",
+    alignItems: "center",
   },
   containerHost: {
     marginTop: "60px",
@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
   avatar: {
     height: "520px",
     width: "400px",
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('md')]: {
       height: "260",
       width: "200",
     },
@@ -94,7 +94,7 @@ function About() {
         <ThemeProvider theme={aboutTheme}>
           <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css" />
           <flexbox className={classes.containerHost}>
-            <Box className={classes.containerText}>
+            <flexbox className={classes.containerText}>
               <Typography variant="h1" className={classes.text}>
               I am Jovi Sidhu, a native of Vancouver, and a semester away
               from completing my Bachelors at McGill University in Biology and Computer Science.
@@ -108,10 +108,10 @@ function About() {
               I have spent the last summer bolstering my understanding of the latest front end technologies and tools such as React.js, React Router, framer-motion, and a lot of JavaScript, 
               which I have practiced through creating several React applications (even this website is a React App!), you can check out the code for this site and rest of my projects on my GitHub.
               </Typography>
-            </Box>
-            <Box className={classes.containerImage}>
-              <Avatar className={classes.avatar} variant="square" alt="photo" src={avatarImage}/>
-            </Box>
+            </flexbox>
+            <flexbox className={classes.containerImage}>
+              <img className={classes.avatar} variant="square" alt="photo" src={avatarImage}/>
+            </flexbox>
           </flexbox>
         </ThemeProvider>
       </div>
