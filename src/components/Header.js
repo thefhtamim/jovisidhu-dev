@@ -35,15 +35,13 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         textAlign: 'center',
         fontSize: 22,
-        marginTop: 10,
         [headerTheme.breakpoints.down('xs')]: {
             fontSize: 15,
-            marginTop: 12,
-            marginRight: theme.spacing(1),
+            marginRight: 30,
           },
     },
     navigationBar: {
-        marginTop: 20,
+        marginTop: 30,
     },
 }));
 
@@ -59,11 +57,6 @@ let headerTheme = createMuiTheme({
     },
 })
 
-const variants = {
-    open: { opacity: 1, x: 0, transition: { duration: 1} },
-    closed: { opacity: 0, x: "-100%", transition: { duration: 1 } }
-}
-
 function Header() {
     const classes = useStyles();
 
@@ -78,9 +71,9 @@ function Header() {
                         <ThemeProvider theme={headerTheme}>
                             <Toolbar className={classes.navigationBar}>
                                 <Link to="/" className="item">
-                                    <img className={classes.menuIcon} src={image} height={100} width={100} />
+                                    <img className={classes.menuIcon} src={image} alt="jovi_logo" height={100} width={100} />
                                 </Link>
-                                <Box style={{flex: 1, minWidth: 10}}></Box>
+                                <Box style={{flex: 1, maxWidth: "33vw", minWidth: 10}}></Box>
                                 <Link to="/work" className="item" style={{ textDecoration: 'none', color: 'black'}}>
                                     <Button className={classes.menuButton}>
                                         <Typography variant="h3" className={classes.title} >

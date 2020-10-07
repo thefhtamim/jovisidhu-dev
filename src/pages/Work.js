@@ -1,10 +1,9 @@
 import React from "react";
-import { useState } from "react";
 import "./css/WorkStyles.css";
 import { motion } from "framer-motion";
 import { Typography, } from "@material-ui/core";
 import { makeStyles, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import jovisidhudev from "./jovisidhudev.js";
 import togospice from "./togospice.js";
 import pokedex from "./pokedex.js";
@@ -14,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   gridContainer: {
     marginTop: 50,
     flexGrow: 1,
+    position: "relative",
   },
   paper: {
     color: "#d3d3d3",
@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 25,
     justifyContent: "center", 
     alignItems: "center", 
-    display: "flex"
+    display: "flex",
+    position: "relative",
   },
   container: {
     padding: 0,
@@ -72,8 +73,6 @@ function Work() {
       variantA: { scale: 1.5 },
       variantB: { scale: 5 },
   }
-
-  const [isVisible, setIsVisible] = useState(false);
 
   return(
     <div className={classes.gridContainer}>

@@ -21,15 +21,24 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'left',
         paragraph: true,
         noWrap: false,
+        position: "relative",
     },
     textBox: {
         minWidth: "300px",
         minHeight: "200px",
-        height: "20%",
+        height: "100%",
         width: "30%",
         marginLeft: theme.spacing(4.25),
         display: "block",
+        flex: "1 1 auto",
     },
+    bodyContainer: {
+        position: "relative",
+        marginBottom: "250px",
+        [theme.breakpoints.down('xs')]: {
+            marginBottom: "140px",
+            },
+    }
 }));
 
 let mainTheme = createMuiTheme({
@@ -58,7 +67,7 @@ mainTheme = responsiveFontSizes(mainTheme);
 function Landing() {
     const classes = useStyles();
     return (
-        <div>
+        <div className={classes.bodyContainer}>
             <ThemeProvider theme={mainTheme}>
                 <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css" />
                     <Typography variant="h1" className={classes.main} style={{ top: 400}}>

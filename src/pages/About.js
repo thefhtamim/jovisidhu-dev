@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, makeStyles, Box, Typography }from '@material-ui/core';
+import { makeStyles, Typography }from '@material-ui/core';
 import avatarImage from '../assets/avatarImage.png';
 import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
  
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: "200px",
     width: "500px",
     height: "500px",
-    [theme.breakpoints.down("920")]: {
+    [theme.breakpoints.down("860")]: {
       height: "500",
       width: "300",
       marginLeft: 0,
@@ -32,6 +32,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "space-around",
     flexWrap: "wrap",
     order: 2,
+    position: "relative",
   },
   containerImage: {
     order: 1,
@@ -44,21 +45,34 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center", 
     display: "flex",
     marginLeft: "0px",
-    [theme.breakpoints.down('xs')]: {
-      marginLeft: "40px",
-    },
     padding: 0,
     margin: 0,
-    display: "flex",
     flexDirection: "row",
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "row",
+    },
     flexWrap: "wrap",
+    position: "relative",
+    marginBottom: "59px",
   },
   avatar: {
-    height: "520px",
-    width: "400px",
-    [theme.breakpoints.down('md')]: {
-      height: "260",
-      width: "200",
+    height: "auto",
+    maxWidth: "20%",
+    [theme.breakpoints.down("lg")]: {
+      maxWidth: "20%",
+      marginLeft: 0,
+    },
+    [theme.breakpoints.down("md")]: {
+      maxWidth: "30%",
+      marginLeft: 0,
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "40%",
+      marginLeft: 0,
+    },
+    [theme.breakpoints.down("xs")]: {
+      maxWidth: "60%",
+      marginLeft: 0,
     },
   },
 }));
@@ -109,9 +123,7 @@ function About() {
               which I have practiced through creating several React applications (even this website is a React App!), you can check out the code for this site and rest of my projects on my GitHub.
               </Typography>
             </flexbox>
-            <flexbox className={classes.containerImage}>
-              <img className={classes.avatar} variant="square" alt="photo" src={avatarImage}/>
-            </flexbox>
+              <img className={classes.avatar} alt="jovi" src={avatarImage}/>
           </flexbox>
         </ThemeProvider>
       </div>
