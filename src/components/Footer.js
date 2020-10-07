@@ -36,7 +36,6 @@ const useStyles = makeStyles(theme => ({
         position: "relative",
         width: "100px",
         height: "100px",
-        backgroundColor: "red",
         overflow: "auto",
     },
     section: {
@@ -60,9 +59,9 @@ function Footer() {
     return(
         <div className={classes.section}>
             <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css"/>
-            <Container className={classes.expander}></Box>
+            <Container className={classes.expander}></Container>
             <Toolbar className={classes.root}>
-                <Box style={{flex: 1, minWidth: "25vw"}}></Box>
+                <Box style={{flex: 1, minWidth: "30vw"}}></Box>
                 <GitHub className={styles.githubIcon} onClick={() => window.open("https://github.com/Mal-Jovi/", " _blank")}></GitHub>
                 <LinkedIn className={styles.infoIcon} onClick={() => window.open("https://www.linkedin.com/in/jovi-sidhu/", " _blank")}></LinkedIn>
                 <Instagram className={styles.infoIcon} onClick={() => window.open("https://www.instagram.com/maljovi/", " _blank")}></Instagram>
