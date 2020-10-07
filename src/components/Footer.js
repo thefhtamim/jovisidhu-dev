@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
         flex: 1,
         minWidth: "25vw",
         [theme.breakpoints.down('xs')]: {
-            fontSize: 0,
+            minWidth: "25vw",
             },
     },
 }));
@@ -61,7 +61,7 @@ function Footer() {
             <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css"/>
             <Container className={classes.expander}></Container>
             <Toolbar className={classes.root}>
-                <Box style={{flex: 1, minWidth: "30vw"}}></Box>
+                <Box className={styles.flexer}></Box>
                 <GitHub className={styles.githubIcon} onClick={() => window.open("https://github.com/Mal-Jovi/", " _blank")}></GitHub>
                 <LinkedIn className={styles.infoIcon} onClick={() => window.open("https://www.linkedin.com/in/jovi-sidhu/", " _blank")}></LinkedIn>
                 <Instagram className={styles.infoIcon} onClick={() => window.open("https://www.instagram.com/maljovi/", " _blank")}></Instagram>

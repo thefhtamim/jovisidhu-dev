@@ -73,7 +73,7 @@ function Header() {
                                 <Link to="/" className="item">
                                     <img className={classes.menuIcon} src={image} alt="jovi_logo" height={100} width={100} />
                                 </Link>
-                                <Box style={{flex: 1, maxWidth: "33vw", minWidth: 10}}></Box>
+                                <Box style={{flex: 1, maxWidth: "32vw", minWidth: 10}}></Box>
                                 <Link to="/work" className="item" style={{ textDecoration: 'none', color: 'black'}}>
                                     <Button className={classes.menuButton}>
                                         <Typography variant="h3" className={classes.title} >

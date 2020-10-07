@@ -22,9 +22,11 @@ const useStyles = makeStyles(theme => ({
     width: "500px",
     height: "500px",
     [theme.breakpoints.down("md")]: {
-      height: "500",
-      width: "300",
       marginLeft: 0,
+    },
+    [theme.breakpoints.down("575")]: {
+      marginLeft: 0,
+      maxWidth: "300px",
     },
     padding: 0,
     order: 2,
@@ -32,7 +34,6 @@ const useStyles = makeStyles(theme => ({
   },
   containerImage: {
     order: 1,
-    marginLeft: "0px",
   },
   containerHost: {
     display: "flex",
@@ -44,6 +45,9 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "row",
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
+    },
+    [theme.breakpoints.down("575")]: {
+      marginBottom: "240px",
     },
     flexWrap: "wrap",
     position: "relative",
