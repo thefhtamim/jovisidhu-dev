@@ -12,6 +12,7 @@ import trout62 from "./trout62.js";
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
     marginTop: 50,
+    marginBottom: "100px",
     flexGrow: 1,
     position: "relative",
   },

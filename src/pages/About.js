@@ -47,7 +47,7 @@ const useStyles = makeStyles(theme => ({
       flexDirection: "column",
     },
     [theme.breakpoints.down("575")]: {
-      marginBottom: "240px",
+      marginBottom: "250px",
     },
     flexWrap: "wrap",
     position: "relative",

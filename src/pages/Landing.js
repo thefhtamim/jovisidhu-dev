@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import Footer from '../components/Footer';
 
 const useStyles = makeStyles((theme) => ({
     root: {
