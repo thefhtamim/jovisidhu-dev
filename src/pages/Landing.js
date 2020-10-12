@@ -1,9 +1,8 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
-import Footer from '../components/Footer';
+import { motion } from "framer-motion";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,27 +66,40 @@ mainTheme = responsiveFontSizes(mainTheme);
 
 function Landing() {
     const classes = useStyles();
+
+    const landingEntry = {
+        variantA: { opacity: 1, transition:{ duration: 1.4 }, x: 0 },
+    }
+
     return (
         <div className={classes.bodyContainer}>
             <ThemeProvider theme={mainTheme}>
                 <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css" />
+                <motion.div
+                    className={classes.containerElement}
+                    variants={landingEntry}
+                    initial={{ opacity: 0, x: -800 }}
+                    animate={"variantA"}
+                    style={{backgroundColor: "transparent"}}
+                >
                     <Typography variant="h1" className={classes.main} style={{ top: 400}}>
-                    I'm Jovi Sidhu
-                </Typography>
-                <br>
-                </br>
-                <Box className={classes.textBox} whiteSpace="normal">
-                    <Typography variant="h6" className={classes.body}>
-                        A Front End Developer from Vancouver with a passion for creating long lasting designs
-                        that stand out.
-                        <br>
-                        </br>
-                        <br>
-                        </br> 
-                        { /*TODO: There should be a way to isolate and change the color of a single word*/ }
-                        I am currently looking for entry positions in front end development and test.
+                        I'm Jovi Sidhu
                     </Typography>
-                </Box>  
+                    <br>
+                    </br>
+                    <Box className={classes.textBox} whiteSpace="normal">
+                        <Typography variant="h6" className={classes.body}>
+                            A Front End Developer from Vancouver with a passion for creating long lasting designs
+                            that stand out.
+                            <br>
+                            </br>
+                            <br>
+                            </br> 
+                            { /*TODO: There should be a way to isolate and change the color of a single word*/ }
+                            I am currently looking for entry positions in front end development and test.
+                        </Typography>
+                    </Box>  
+                </motion.div>
             </ThemeProvider>
         </div>
     );

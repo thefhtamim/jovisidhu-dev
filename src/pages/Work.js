@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     color: "#d3d3d3",
-  },
+  }, 
   containerHost: {
     marginTop: 25,
     justifyContent: "center", 
@@ -73,6 +73,7 @@ function Work() {
   const hover = {
       variantA: { scale: 1.5 },
       variantB: { scale: 5 },
+      variantC: { opacity: 1, transition:{duration: 0.75}}
   }
 
   return(
@@ -86,6 +87,8 @@ function Work() {
                   className={classes.containerElement}
                   variants={hover}
                   whileHover={"variantA"}
+                  initial={{ opacity: 0 }}
+                  animate={"variantC"}
                   size={150}
                   radius={30}
                   style={{backgroundColor: "#000000"}}
@@ -100,6 +103,8 @@ function Work() {
                 className={classes.containerElement}
                 variants={hover}
                 whileHover={"variantA"}
+                initial={{ opacity: 0 }}
+                animate={"variantC"}
                 size={150}
                 radius={30}
                 style={{backgroundColor: "#FF5656"}}
@@ -114,6 +119,8 @@ function Work() {
                 className={classes.containerElement}
                 variants={hover}
                 whileHover={"variantA"}
+                initial={{ opacity: 0 }}
+                animate={"variantC"}
                 size={150}
                 radius={30}
                 style={{backgroundColor: "#0B484F"}}
@@ -128,6 +135,8 @@ function Work() {
                 className={classes.containerElement}
                 variants={hover}
                 whileHover={"variantA"}
+                initial={{ opacity: 0 }}
+                animate={"variantC"}
                 size={150}
                 radius={30}
                 style={{backgroundColor: "#BFB064"}}

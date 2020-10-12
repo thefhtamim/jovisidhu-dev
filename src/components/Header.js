@@ -81,7 +81,7 @@ function Header() {
                                         </Typography>
                                     </Button>
                                 </Link>
-                                <Button className={classes.menuButton} onClick={() => window.open("https://drive.google.com/file/d/1RDuH2kjIGr8oiNyONvpTD3yOV0QOtQJ6/view?usp=sharing", " _blank")}>
+                                <Button className={classes.menuButton} onClick={() => window.open("https://drive.google.com/file/d/123z1s10DwCAub4HkQ8iZqYYouYQcl1t-/view?usp=sharing", " _blank")}>
                                     <Typography variant="h3" className={classes.title}>
                                         resume
                                     </Typography>
