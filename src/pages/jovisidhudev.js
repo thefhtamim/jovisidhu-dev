@@ -8,20 +8,20 @@ import image from '../assets/artboard1.svg';
 const useStyles = makeStyles((theme) => ({
   containerElement: {
     margin: "5px",
-    width: "63vw",
+    width: "600px",
     height: "40vh",
     
     marginRight: "65px",
 
     border: "solid",
-    borderColor: "black",
+    borderColor: "transparent",
     borderRadius: "20px",
     borderWidth: "5px",
 
     backgroundColor: "transparent",
 
     overflow: "hidden",
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("645")]: {
       width: "90vw",
       height: "60vh",
       },
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "flex-start",
     },
     subtitle: {
-      marginLeft: "15px",
+      marginLeft: "30px",
       fontSize: "20px",
     },
     menuIcon: {
@@ -79,7 +79,7 @@ function Jovisidhudev() {
     return (
       <div className={classes.hostContainer}>
         <div className={classes.innerContainer}>
-          <Typography className={classes.subtitle}>jovisidhudev</Typography>
+          <Typography className={classes.subtitle}>jovisidhudev - Personal Portfolio Website</Typography>
           <motion.div
             className={classes.containerElement}
             variants={inner}
