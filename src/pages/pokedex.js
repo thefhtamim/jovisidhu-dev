@@ -2,9 +2,7 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { Typography } from '@material-ui/core';
 import { makeStyles, ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import image from '../assets/artboard1.svg';
  
-
 const useStyles = makeStyles((theme) => ({
   containerElement: {
     margin: "5px",
@@ -17,9 +15,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "transparent",
 
     overflow: "hidden",
-    [theme.breakpoints.down("645")]: {
+    [theme.breakpoints.down("1200")]: {
       width: "90vw",
-      height: "60vh",
       },
     },
     elementText: {
@@ -29,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
       color: "black",
       margin: "auto",
       overflow: "wrap",
-      fontSize: "1vw",
+      fontSize: "20px",
     },
     hostContainer: {
       justifyContent: "center",
@@ -79,29 +76,31 @@ function Pokedex() {
     return (
       <div className={classes.hostContainer}>
         <div className={classes.innerContainer}>
-          <Typography className={classes.subtitle}>pokedex - Visual Pokemon Dictionary</Typography>
-          <motion.div
-            className={classes.containerElement}
-            variants={inner}
-            initial={{opacity: 0}}
-            animate={"entry"}
-            size={150}
-            radius={30}
-          >
-            <Typography className={classes.elementText}>
-              This page is currently underconstruction! I'm probably working on it right now!
-              <br></br>
-              <br></br>
-              The focus of this project was to get familiar with the basic fundamentals of creating a site using several compoenents, as well as an exercise in interacting with a RESTful API, fetching information and displaying it pleasantly.
-              In this case the footer, header, body and left panel are all seperate components, which makes the workflow much easier as the amount of code in each js file strictly relates to that component and minimizes the amount of code to read through.
-              <br></br>
-              <br></br>
-              The RESTful API being used is the pokeAPI which is a publicly accessible, open-source database of pokemon information and a wonderful API to use to practise extracting and displaying information.
-              <br></br>
-              <br></br>
-              The site's components are modified from the material-UI front end framework.
-            </Typography>
-          </motion.div>
+          <ThemeProvider theme={mainTheme}>
+            <Typography className={classes.subtitle}>pokedex - Visual Pokemon Dictionary</Typography>
+            <motion.div
+              className={classes.containerElement}
+              variants={inner}
+              initial={{opacity: 0}}
+              animate={"entry"}
+              size={150}
+              radius={30}
+            >
+              <Typography className={classes.elementText}>
+                This page is currently underconstruction! I'm probably working on it right now!
+                <br></br>
+                <br></br>
+                The focus of this project was to get familiar with the basic fundamentals of creating a site using several compoenents, as well as an exercise in interacting with a RESTful API, fetching information and displaying it pleasantly.
+                In this case the footer, header, body and left panel are all seperate components, which makes the workflow much easier as the amount of code in each js file strictly relates to that component and minimizes the amount of code to read through.
+                <br></br>
+                <br></br>
+                The RESTful API being used is the pokeAPI which is a publicly accessible, open-source database of pokemon information and a wonderful API to use to practise extracting and displaying information.
+                <br></br>
+                <br></br>
+                The site's components are modified from the material-UI front end framework.
+              </Typography>
+            </motion.div>
+          </ThemeProvider>
         </div>
       </div>
     );

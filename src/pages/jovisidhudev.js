@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { Typography } from '@material-ui/core';
-import { makeStyles, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 import siteLogo from '../assets/artboard1.svg';
 import logoDrafts from '../assets/logo_drafts.png';
  
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: "100px",
 
     overflow: "hidden",
-    [theme.breakpoints.down("645")]: {
+    [theme.breakpoints.down("1200")]: {
       width: "90vw",
       },
     },
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       color: "black",
       margin: "auto",
       overflow: "wrap",
-      fontSize: "1vw",
+      fontSize: "20px",
     },
     hostContainer: {
       justifyContent: "center",
@@ -89,43 +89,45 @@ function Jovisidhudev() {
     return (
       <div className={classes.hostContainer}>
         <div className={classes.innerContainer}>
-          <Typography className={classes.subtitle}>jovisidhudev - Personal Portfolio Website</Typography>
-          <motion.div
-            className={classes.containerElement}
-            variants={inner}
-            initial={{opacity: 0}}
-            animate={"entry"}
-            size={150}
-            radius={30}
-          >
-            <Typography className={classes.elementText}>
-              This page is currently underconstruction! I'm probably working on it right now!
-              <br></br>
-              <br></br>
-              This focus of this project was to create a website that displayed my understanding of efficient design layouts and modern
-              front-end development design principles.
+          <ThemeProvider theme={mainTheme}>
+            <Typography className={classes.subtitle}>jovisidhudev - Personal Portfolio Website</Typography>
+            <motion.div
+              className={classes.containerElement}
+              variants={inner}
+              initial={{opacity: 0}}
+              animate={"entry"}
+              size={150}
+              radius={30}
+            >
+              <Typography className={classes.elementText}>
+                This page is currently underconstruction! I'm probably working on it right now!
+                <br></br>
+                <br></br>
+                This focus of this project was to create a website that displayed my understanding of efficient design layouts and modern
+                front-end development design principles.
 
-              The site had to be easy to navigate, visually appealling, mobile friendly, and had to be built using a modern front end frameworks and web development packages.
-              <br></br>
-              <br></br>
-              The site is a React.js aplication made using HTML, CSS, Javascript, react-router for dynamically loading in components, material-UI for quickly setting up capable components, and framer-motion for the animations.
-              <br></br>
-              <br></br>
-              I first used Adobe XD in order to get a feel for the layout I had in mind and to rapidly try restructing elements, changing styling and fonts. The prototype is available here: 
-              <Typography className={classes.elementText} style={{color: "blue", marginLeft: "-15px", fontWeight: "bold"}} onClick={() => window.open("https://xd.adobe.com/view/65e7d38d-e495-4e91-a819-2ee12ddcc99b-30b4/", " _blank")}>
-                jovisidhu.dev - Adobe XD 
+                The site had to be easy to navigate, visually appealling, mobile friendly, and had to be built using a modern front end frameworks and web development packages.
+                <br></br>
+                <br></br>
+                The site is a React.js aplication made using HTML, CSS, Javascript, react-router for dynamically loading in components, material-UI for quickly setting up capable components, and framer-motion for the animations.
+                <br></br>
+                <br></br>
+                I first used Adobe XD in order to get a feel for the layout I had in mind and to rapidly try restructing elements, changing styling and fonts. The prototype is available here: 
+                <Typography className={classes.elementText} style={{color: "blue", marginLeft: "-15px", fontWeight: "bold"}} onClick={() => window.open("https://xd.adobe.com/view/65e7d38d-e495-4e91-a819-2ee12ddcc99b-30b4/", " _blank")}>
+                  jovisidhu.dev - Adobe XD 
+                </Typography>
+                <br></br>
+                Below are numerous concepts for the logo of this site, I select many possible candidate fonts from the adobe fonts library, and then iterated between different fonts, font weights and positioning until I landed on 
+                something visually striking and bold.
+                <img className={classes.imageLarge} src={logoDrafts} alt="logo_drafts"/>
+                <br></br>
+                <br></br>
+                Below is the final design I landed on, which is the current site logo.                
+                <br></br>
+                <img className={classes.image} src={siteLogo} alt="jovi_logo" height={100} width={100} />
               </Typography>
-              <br></br>
-              Below are numerous concepts for the logo of this site, I select many possible candidate fonts from the adobe fonts library, and then iterated between different fonts, font weights and positioning until I landed on 
-              something visually striking and bold.
-              <img className={classes.imageLarge} src={logoDrafts} alt="logo_drafts"/>
-              <br></br>
-              <br></br>
-              Below is the final design I landed on, which is the current site logo.                
-              <br></br>
-              <img className={classes.image} src={siteLogo} alt="jovi_logo" height={100} width={100} />
-            </Typography>
-          </motion.div>
+            </motion.div>
+          </ThemeProvider>
         </div>
       </div>
     );
