@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from "framer-motion";
 import { Typography } from '@material-ui/core';
 import { makeStyles, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
-import siteLogo from '../assets/artboard1.svg';
-import logoDrafts from '../assets/logo_drafts.png';
+import daycon from '../assets/daycon.png';
+import tazumi from '../assets/tazumi.png';
+import prochnost from '../assets/prochnost.png';
  
 
 const useStyles = makeStyles((theme) => ({
@@ -22,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
     [theme.breakpoints.down("645")]: {
       width: "90vw",
+      height: "60vh",
       },
     },
     elementText: {
@@ -37,18 +39,22 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
       alignItems: "center", 
       display: "flex",
-      flexFlow: "column noWrap",
+      flexFlow: "column wrap",
       marginTop: "50px",
     },
     innerContainer: {
       justifyContent: "flex-start",
     },
     subtitle: {
-      marginLeft: "30px",
-      marginRight: 0,
+      marginLeft: "27px",
       fontSize: "20px",
       fontWeight: "bold",
       maxWidth: "80vw",
+      color: "#fe5b5b",
+    },
+    menuIcon: {
+      marginLeft: "15px",
+      marginTop: "25px",
     },
     image: {
       marginTop: "25px",
@@ -78,7 +84,7 @@ let mainTheme = createMuiTheme({
 
 mainTheme = responsiveFontSizes(mainTheme);
 
-function Jovisidhudev() {
+function Clever() {
 
   const classes = useStyles();
 
@@ -89,7 +95,7 @@ function Jovisidhudev() {
     return (
       <div className={classes.hostContainer}>
         <div className={classes.innerContainer}>
-          <Typography className={classes.subtitle}>jovisidhudev - Personal Portfolio Website</Typography>
+          <Typography className={classes.subtitle}>Clever - Independently developed game made using Unity</Typography>
           <motion.div
             className={classes.containerElement}
             variants={inner}
@@ -99,31 +105,33 @@ function Jovisidhudev() {
             radius={30}
           >
             <Typography className={classes.elementText}>
-              This page is currently underconstruction! I'm probably working on it right now!
+              This project is a game I am developing Independently using the Unity game engine. The majority of the game logic is programmed using C#, and the aim of the UI is to try creating it using react.js.
               <br></br>
               <br></br>
-              This focus of this project was to create a website that displayed my understanding of efficient design layouts and modern
-              front-end development design principles.
-
-              The site had to be easy to navigate, visually appealling, mobile friendly, and had to be built using a modern front end frameworks and web development packages.
+              I am a registered Steamworks game developer, enabling me to eventually launch my game on the Steam game distriubtion platform. 
+              The game is more of a hobby project to keep me practising object oriented programming and design patterns. 
+              The goal is to have a published demo running on Steam in Feburary.
               <br></br>
               <br></br>
-              The site is a React.js aplication made using HTML, CSS, Javascript, react-router for dynamically loading in components, material-UI for quickly setting up capable components, and framer-motion for the animations.
+              The idea for the game is a FPS rogue-lite, where you play as a corporate spy breaking into different made-up companies in a cyberpunk world.
+              I have desinged a few logos for these fictional companies, the concepts for which are below. All of which were designed to look very industrial, and very corporate, while also trying to look like real logos of an actual company, 
+              rather than overly fictious. The inspiration are the logos for companies in movies like Blade Runner, and in Aliens.
+              <img className={classes.imageLarge} src={daycon} alt="jovi_logo"/>
+              DAYCON is an American Robotics Company. The design is based on the very whimsical concept logo that microsoft first used which involved letters within letters.
               <br></br>
               <br></br>
-              I first used Adobe XD in order to get a feel for the layout I had in mind and to rapidly try restructing elements, changing styling and fonts. The prototype is available here: 
-              <Typography className={classes.elementText} style={{color: "blue", marginLeft: "-15px", fontWeight: "bold"}} onClick={() => window.open("https://xd.adobe.com/view/65e7d38d-e495-4e91-a819-2ee12ddcc99b-30b4/", " _blank")}>
-                jovisidhu.dev - Adobe XD 
-              </Typography>
-              <br></br>
-              Below are numerous concepts for the logo of this site, I select many possible candidate fonts from the adobe fonts library, and then iterated between different fonts, font weights and positioning until I landed on 
-              something visually striking and bold.
-              <img className={classes.imageLarge} src={logoDrafts} alt="logo_drafts"/>
               <br></br>
               <br></br>
-              Below is the final design I landed on, which is the current site logo.                
+              <img className={classes.imageLarge} src={tazumi} alt="jovi_logo"/>
+              Tazumi is a Japanese electronics company. The design is heavily inspired by SONY's design language in the 1980s.
               <br></br>
-              <img className={classes.image} src={siteLogo} alt="jovi_logo" height={100} width={100} />
+              <br></br>
+              <br></br>
+              <br></br>
+              <img className={classes.imageLarge} src={prochnost} alt="jovi_logo"/>
+              Prochnost is a modern, Russian automotive company. The design is an amalgamation of different aspects of several car companies, with the color scheme taken from the Russian flag.
+              <br></br>
+              <br></br>
             </Typography>
           </motion.div>
         </div>
@@ -131,4 +139,4 @@ function Jovisidhudev() {
     );
 }
  
-export default Jovisidhudev;
+export default Clever;

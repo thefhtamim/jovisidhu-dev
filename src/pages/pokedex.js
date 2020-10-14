@@ -8,11 +8,7 @@ import image from '../assets/artboard1.svg';
 const useStyles = makeStyles((theme) => ({
   containerElement: {
     margin: "5px",
-    width: "600px",
-    height: "40vh",
-    
-    marginRight: "65px",
-
+    width: "45vw",
     border: "solid",
     borderColor: "transparent",
     borderRadius: "20px",
@@ -33,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
       color: "black",
       margin: "auto",
       overflow: "wrap",
+      fontSize: "1vw",
     },
     hostContainer: {
       justifyContent: "center",
@@ -48,6 +45,8 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: "30px",
       fontSize: "20px",
       color: "#FF5656",
+      fontWeight: "bold",
+      maxWidth: "80vw",
     },
     menuIcon: {
       marginLeft: "15px",
@@ -97,7 +96,7 @@ function Pokedex() {
               In this case the footer, header, body and left panel are all seperate components, which makes the workflow much easier as the amount of code in each js file strictly relates to that component and minimizes the amount of code to read through.
               <br></br>
               <br></br>
-              The RESTful API being used is the pokeAPI which is a publicly accessible, open-source database of pokemon information and a wonderful API to use to practise extracting and displaying information.\
+              The RESTful API being used is the pokeAPI which is a publicly accessible, open-source database of pokemon information and a wonderful API to use to practise extracting and displaying information.
               <br></br>
               <br></br>
               The site's components are modified from the material-UI front end framework.

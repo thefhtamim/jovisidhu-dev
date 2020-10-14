@@ -2,8 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { GitHub, LinkedIn, Instagram }  from '@material-ui/icons';
 import styles from './Footer.module.css';
-import { Toolbar, Box, Container } from '@material-ui/core';
-
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,8 +18,6 @@ const useStyles = makeStyles(theme => ({
         marginBottom: "40px",
     },
 }));
-
-
 
 function Footer() {
     const classes = useStyles();

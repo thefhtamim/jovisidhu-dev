@@ -60,8 +60,6 @@ let headerTheme = createMuiTheme({
 function Header() {
     const classes = useStyles();
 
-
-
     return (
         <div>
             <link rel="stylesheet" href="https://use.typekit.net/dau4ouf.css"/>

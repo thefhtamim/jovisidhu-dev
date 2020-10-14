@@ -8,6 +8,7 @@ import jovisidhudev from "./jovisidhudev.js";
 import togospice from "./togospice.js";
 import pokedex from "./pokedex.js";
 import trout62 from "./trout62.js";
+import clever from "./clever.js";
  
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
@@ -23,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 25,
     justifyContent: "center", 
     alignItems: "center", 
+    flexFlow: "row wrap",
     display: "flex",
     position: "relative",
   },
@@ -41,6 +43,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "65px",
     [theme.breakpoints.down('xs')]: {
       marginRight: 0,
+      width: "250px",
+      height: "50px",
     },
     [theme.breakpoints.down('sm')]: {
       marginRight: 0,
@@ -52,6 +56,10 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "15px",
     color: "white",
     margin: "auto",
+    [theme.breakpoints.down('xs')]: {
+      marginRight: 0,
+      paddingTop: "5px",
+    },
   },
 }));
 
@@ -80,8 +88,7 @@ function Work() {
     <div className={classes.gridContainer}>
       <ThemeProvider theme={bodyTheme}>
         <Router>
-          <flexbox className={classes.containerHost} >
-            <flexbox className={classes.container}>
+          <div className={classes.containerHost} >
               <Link to="/work/jovisidhudev" style={{ textDecoration: "none", color: 'black'}}>
                 <motion.div
                   className={classes.containerElement}
@@ -95,38 +102,6 @@ function Work() {
                 >
                   <Typography className={ classes.elementText } variant="h1">
                     jovisidhu.dev
-                  </Typography>
-                </motion.div>
-              </Link>
-              <Link to="/work/pokedex" style={{ textDecoration: "none", color: 'black'}}>
-                <motion.div
-                className={classes.containerElement}
-                variants={hover}
-                whileHover={"variantA"}
-                initial={{ opacity: 0 }}
-                animate={"variantC"}
-                size={150}
-                radius={30}
-                style={{backgroundColor: "#FF5656"}}
-                >
-                  <Typography className={classes.elementText} variant="h1">
-                    pokedex
-                  </Typography>
-                </motion.div>
-              </Link>
-              <Link to="/work/togospice" style={{ textDecoration: "none", color: 'black'}}>
-                <motion.div
-                className={classes.containerElement}
-                variants={hover}
-                whileHover={"variantA"}
-                initial={{ opacity: 0 }}
-                animate={"variantC"}
-                size={150}
-                radius={30}
-                style={{backgroundColor: "#0B484F"}}
-                >
-                  <Typography className={classes.elementText} variant="h1">
-                    TOGOSPICE
                   </Typography>
                 </motion.div>
               </Link>
@@ -146,12 +121,60 @@ function Work() {
                   </Typography>
                 </motion.div>
               </Link>
-            </flexbox>
-          </flexbox>
+              <Link to="/work/togospice" style={{ textDecoration: "none", color: 'black'}}>
+                <motion.div
+                className={classes.containerElement}
+                variants={hover}
+                whileHover={"variantA"}
+                initial={{ opacity: 0 }}
+                animate={"variantC"}
+                size={150}
+                radius={30}
+                style={{backgroundColor: "#0B484F"}}
+                >
+                  <Typography className={classes.elementText} variant="h1">
+                    TOGOSPICE
+                  </Typography>
+                </motion.div>
+              </Link>
+              <Link to="/work/pokedex" style={{ textDecoration: "none", color: 'black'}}>
+                <motion.div
+                className={classes.containerElement}
+                variants={hover}
+                whileHover={"variantA"}
+                initial={{ opacity: 0 }}
+                animate={"variantC"}
+                size={150}
+                radius={30}
+                style={{backgroundColor: "#e0242f"}}
+                >
+                  <Typography className={classes.elementText} variant="h1">
+                    pokedex
+                  </Typography>
+                </motion.div>
+              </Link>
+              <Link to="/work/clever" style={{ textDecoration: "none", color: 'black'}}>
+                <motion.div
+                className={classes.containerElement}
+                variants={hover}
+                whileHover={"variantA"}
+                initial={{ opacity: 0 }}
+                animate={"variantC"}
+                size={150}
+                radius={30}
+                style={{backgroundColor: "#fe5b5b"}}
+                >
+                  <Typography className={classes.elementText} variant="h1">
+                    Clever
+                  </Typography>
+                </motion.div>
+              </Link>
+          </div>
           <Route exact path="/work/jovisidhudev" component={jovisidhudev} />
           <Route exact path="/work/pokedex" component={pokedex} />
           <Route exact path="/work/togospice" component={togospice} />
           <Route exact path="/work/trout62" component={trout62} />
+          <Route exact path="/work/clever" component={clever} />
         </Router>
       </ThemeProvider>
     </div>
