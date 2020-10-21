@@ -5,8 +5,11 @@ This website is currently:
 !  90% complete 
 ```
 *Fill out content on each portfolio element on the WORK page.
+
 ~~* TODO: Grid view of completed project thumbnails.~~
+
 ~~* TODO: Case study view of completed design projects.~~
+
 ~~* TODO: Blurb and photo formatted for the 'about' page.~~
 
 It can be visited at https://jovisidhu.dev 
