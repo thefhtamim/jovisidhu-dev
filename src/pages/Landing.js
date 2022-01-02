@@ -88,7 +88,7 @@ function Landing() {
                     <br>
                     </br>
                     <Box className={classes.textBox} whiteSpace="normal">
-                        <Typography variant="h6" className={classes.body}>
+                        <Typography variant="h4" className={classes.body}>
                             Free Music distribution Worldwide.
                             <br>
                             </br>
