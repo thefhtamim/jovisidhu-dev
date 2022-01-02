@@ -83,20 +83,20 @@ function Landing() {
                     style={{backgroundColor: "transparent"}}
                 >
                     <Typography variant="h1" className={classes.main} style={{ top: 400}}>
-                        I'm Jovi Sidhu
+                        Welcome to Arteon Records!
                     </Typography>
                     <br>
                     </br>
                     <Box className={classes.textBox} whiteSpace="normal">
                         <Typography variant="h6" className={classes.body}>
-                            A Front End Developer from Vancouver with a passion for creating long lasting designs
-                            that stand out.
+                            Free Music distribution Worldwide.
                             <br>
                             </br>
+                               100% Independent Record Label 
                             <br>
                             </br> 
                             { /*TODO: There should be a way to isolate and change the color of a single word*/ }
-                            I am currently looking for entry positions in front end development and test.
+                            Based in South Asia.
                         </Typography>
                     </Box>  
                 </motion.div>
