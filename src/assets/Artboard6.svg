@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096">
-  <defs>
-    <style>
-      .cls-1 {
-        font-size: 300px;
-        fill: #fff;
-        font-family: Pragmatica;
-        font-weight: 700;
-        font-style: italic;
-      }
-    </style>
-  </defs>
-  <g id="Artboard_6" data-name="Artboard 6">
-    <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" x="213.59" y="221.781" width="3668.11" height="3653.099" rx="279" ry="279"/>
-    <text id="J" class="cls-1" transform="translate(941.235 3259.535) scale(11.876)">J</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="4096" viewBox="0 0 4096 4096"><defs><style>.cls-1{font-size:300px;fill:#fff;font-family:Pragmatica;font-weight:700;font-style:italic}</style></defs><g id="Artboard_6" data-name="Artboard 6"><rect id="Rounded_Rectangle_1" width="3668.11" height="3653.099" x="213.59" y="221.781" data-name="Rounded Rectangle 1" rx="279" ry="279"/><text id="J" class="cls-1" transform="translate(941.235 3259.535) scale(11.876)">J</text></g></svg>
